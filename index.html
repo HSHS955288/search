@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <base target="_top">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>查詢</title>
+</head>
+
+<body>
+    <center>
+        <h1>Search</h1>
+        <input id="word" placeholder="請輸入關鍵字" style="width: 250px;;font-size:18px" type="text">
+        <br>
+        <br>
+        <button onclick="searchG()" style="font-size:18px">Google</button>
+        <button onclick="searchB()" style="font-size:18px">Bing</button>
+        <button onclick="searchY()" style="font-size:18px">Yahoo</button>
+        <br>
+        <br>
+        <button onclick="searchP()" style="font-size:18px">Pixabay圖庫</button>
+        <br>
+        <br>
+        <button onclick="searchYT()" style="font-size:18px">YouTube影片</button>
+        <br>
+        <br>
+        <button onclick="meet()" style="font-size:18px">開啟Google meet</button>
+        <br>
+        <h3>Google office</h3>
+        <a href="https://docs.google.com/document">文件</a><a> | </a>
+        <a href="https://docs.google.com/presentation">簡報</a><a> | </a>
+        <a href="https://docs.google.com/spreadsheets">試試算</a><a> | </a>
+        <a href="https://docs.google.com/forms">表單</a>
+        <br>
+        <h3>Google education</h3>
+        <a href="https://classroom.google.com">classroom</a><a> | </a>
+        <a href="https://jamboard.google.com">jamboard</a>
+        <br>
+        <h3>Google location</h3>
+        <a href="https://www.google.com/maps">maps</a><a> | </a>
+        <a href="https://earth.google.com/web/">earth</a>
+    </center>
+    <script>
+        function searchG() {
+            let word = $("#word").val();
+            window.location.href = 'https://www.google.com.tw/search?q=' + word;
+        }
+        function searchB() {
+            let word = $("#word").val();
+            window.location.href = 'https://www.bing.com/search?q=' + word;
+        }
+        function searchY() {
+            let word = $("#word").val();
+            window.location.href = 'https://tw.search.yahoo.com/search?p=' + word;
+        }
+        function searchP() {
+            let word = $("#word").val();
+            window.location.href = 'https://pixabay.com/images/search/' + word;
+        }
+        function searchYT() {
+            let word = $("#word").val();
+            window.location.href = 'https://www.youtube.com/results?search_query=' + word;
+        }
+        function meet() {
+            let word = $("#word").val();
+            window.location.href = ' https://meet.google.com/' + word;
+        }
+    </script>
+</body>
+<style>
+    button {
+        border: 2px #999999 solid;
+        background-color: #003C9D;
+        color: #fff;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        color: #003C9D;
+        background-color: #fff;
+        border: 2px #003C9D solid;
+    }
+</style>
+
+</html>
