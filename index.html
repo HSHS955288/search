@@ -2,88 +2,185 @@
 <html>
 
 <head>
-    <base target="_top">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
-    </script>
+
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="/all.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    </script>
+    <script src="/main.js"></script>
+    <script src="/link.js"></script>
+    <script src="/dropdown.js"></script>
     <title>查詢</title>
 </head>
 
 <body>
     <center>
         <h1>Search</h1>
-        <input id="word" placeholder="請輸入關鍵字" style="width: 250px;;font-size:18px" type="text">
+        <form id="input" action="javascript:submit();">
+            <input id="word" placeholder="請輸入關鍵字" style="width: 270px;font-size:18px" type="text">
+        </form>
+        <br>
+        <h2>搜尋工具</h2>
+        <div id="s2" class="line">
+            <div>
+                <button onclick="searchG()" class="imgbtn">
+                    <img src="/assets/google.png" class="imgbtnpic">
+                </button>
+                <br>
+                <a class="imgbtntxt">Google</a>
+            </div>
+            <div>
+                <button onclick="searchB()" class="imgbtn">
+                    <img src="/assets/bing.png" class="imgbtnpic">
+                </button>
+                <br>
+                <a class="imgbtntxt">Bing</a>
+            </div>
+            <div>
+                <button onclick="searchY()" class="imgbtn">
+                    <img src="/assets/yahoo.png" class="imgbtnpic">
+                </button>
+                <br>
+                <a class="imgbtntxt">Yahoo</a>
+            </div>
+        </div>
+        <br>
+        <h3></h3>
+        <div id="s1" class="line">
+            <div>
+                <button onclick="searchYT()" class="imgbtn">
+                    <img src="/assets/youtube.png" class="imgbtnpic">
+                </button>
+                <br>
+                <a class="imgbtntxt">Youtube</a>
+            </div>
+            <div>
+                <button onclick="searchP()" class="imgbtn">
+                    <img src="/assets/pixabay.png" class="imgbtnpic">
+                </button>
+                <br>
+                <a class="imgbtntxt">Pixabay</a>
+            </div>
+            <div>
+                <button onclick="meet()" class="imgbtn">
+                    <img src="/assets/video-conference.png" class="imgbtnpic">
+                </button>
+                <br>
+                <a class="imgbtntxt">開啟Meet</a>
+            </div>
+        </div>
         <br>
         <br>
-        <button onclick="searchG()" style="font-size:18px">Google</button>
-        <button onclick="searchB()" style="font-size:18px">Bing</button>
-        <button onclick="searchY()" style="font-size:18px">Yahoo</button>
+        <hr style="width: 80%;">
+        <h2>捷徑</h2>
+        <div id="sc1" class="line">
+            <div>
+                <button onclick="doc()" class="imgbtn">
+                    <img src="/assets/google-docs.png" class="imgbtnpic">
+                </button>
+                <br>
+                <a class="imgbtntxt">文件</a>
+            </div>
+            <div>
+                <button onclick="silde()" class="imgbtn">
+                    <img src="/assets/google-slides.png" class="imgbtnpic">
+                </button>
+                <br>
+                <a class="imgbtntxt">簡報</a>
+            </div>
+            <div>
+                <button onclick="sheet()" class="imgbtn">
+                    <img src="/assets/google-sheets.png" class="imgbtnpic">
+                </button>
+                <br>
+                <a class="imgbtntxt">試算表</a>
+            </div>
+            <div>
+                <button onclick="form()" class="imgbtn">
+                    <img src="/assets/google-forms.png" class="imgbtnpic">
+                </button>
+                <br>
+                <a class="imgbtntxt">表單</a>
+            </div>
+        </div>
+        <br>
+        <h3></h3>
+        <div id="sc2" class="line">
+            <div>
+                <button onclick="classroom()" class="imgbtn">
+                    <img src="/assets/google-classroom.png" class="imgbtnpic">
+                </button>
+                <br>
+                <a class="imgbtntxt">classroom</a>
+            </div>
+            <div>
+                <button onclick="jamboard()" class="imgbtn">
+                    <img src="/assets/jamboard.png" class="imgbtnpic">
+                </button>
+                <br>
+                <a class="imgbtntxt">jamboard</a>
+            </div>
+            <div>
+                <button onclick="map()" class="imgbtn">
+                    <img src="/assets/google-maps.png" class="imgbtnpic">
+                </button>
+                <br>
+                <a class="imgbtntxt">maps</a>
+            </div>
+            <div>
+                <button onclick="earth()" class="imgbtn">
+                    <img src="/assets/planet-earth.png" class="imgbtnpic">
+                </button>
+                <br>
+                <a class="imgbtntxt">earth</a>
+            </div>
+        </div>
         <br>
         <br>
-        <button onclick="searchP()" style="font-size:18px">Pixabay圖庫</button>
         <br>
         <br>
-        <button onclick="searchYT()" style="font-size:18px">YouTube影片</button>
-        <br>
-        <br>
-        <button onclick="meet()" style="font-size:18px">開啟Google meet</button>
-        <br>
-        <h3>Google office</h3>
-        <a href="https://docs.google.com/document">文件</a><a> | </a>
-        <a href="https://docs.google.com/presentation">簡報</a><a> | </a>
-        <a href="https://docs.google.com/spreadsheets">試試算</a><a> | </a>
-        <a href="https://docs.google.com/forms">表單</a>
-        <br>
-        <h3>Google education</h3>
-        <a href="https://classroom.google.com">classroom</a><a> | </a>
-        <a href="https://jamboard.google.com">jamboard</a>
-        <br>
-        <h3>Google location</h3>
-        <a href="https://www.google.com/maps">maps</a><a> | </a>
-        <a href="https://earth.google.com/web/">earth</a>
     </center>
-    <script>
-        function searchG() {
-            let word = $("#word").val();
-            window.location.href = 'https://www.google.com.tw/search?q=' + word;
-        }
-        function searchB() {
-            let word = $("#word").val();
-            window.location.href = 'https://www.bing.com/search?q=' + word;
-        }
-        function searchY() {
-            let word = $("#word").val();
-            window.location.href = 'https://tw.search.yahoo.com/search?p=' + word;
-        }
-        function searchP() {
-            let word = $("#word").val();
-            window.location.href = 'https://pixabay.com/images/search/' + word;
-        }
-        function searchYT() {
-            let word = $("#word").val();
-            window.location.href = 'https://www.youtube.com/results?search_query=' + word;
-        }
-        function meet() {
-            let word = $("#word").val();
-            window.location.href = ' https://meet.google.com/' + word;
-        }
-    </script>
 </body>
-<style>
-    button {
-        border: 2px #999999 solid;
-        background-color: #003C9D;
-        color: #fff;
-        border-radius: 10px;
-        cursor: pointer;
-    }
-
-    button:hover {
-        color: #003C9D;
-        background-color: #fff;
-        border: 2px #003C9D solid;
-    }
-</style>
+<footer>
+    <div class="ft">
+        <div class="ftitem">
+            <div class="dropdown1">
+                <a>選擇預設搜尋工具:</a><br>
+                <button id="searchDropDownbtn" class="dropbtn1" onclick="showSearchDropDown()">- ▼</button>
+                <div id="searchDropDown" class="dropdown-content1">
+                    <a onclick="setSearch(0)">Google</a>
+                    <a onclick="setSearch(1)">Bing</a>
+                    <a onclick="setSearch(2)">Yahoo</a>
+                    <a onclick="setSearch(3)">Youtube</a>
+                    <a onclick="setSearch(4)">Pixabay</a>
+                    <a onclick="setSearch(5)">開啟Meet</a>
+                </div>
+            </div>
+            <div class="dropdown2">
+                <a>選擇預設Google使用者:</a><br>
+                <button id="authDropDownbtn" class="dropbtn2" onclick="showAuthDropDown()">- ▼</button>
+                <div id="authDropDown" class="dropdown-content2">
+                    <a onclick="setAuth(0)">1(預設)</a>
+                    <a onclick="setAuth(1)">2</a>
+                    <a onclick="setAuth(2)">3</a>
+                    <a onclick="setAuth(3)">4</a>
+                    <a onclick="setAuth(4)">5</a>
+                    <a onclick="setAuth(5)">6</a>
+                </div>
+            </div>
+        </div>
+        <div class="ftitem">
+            <br>
+            <a class="copyright">Pixabay icons created by Pixel perfect - Flaticon</a>
+            <br>
+            <a class="copyright">other icons created by Freepik - Flaticon</a>
+        </div>
+    </div>
+</footer>
 
 </html>
