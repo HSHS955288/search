@@ -25,16 +25,16 @@ function meet() {
 }
 
 /*Sortcut */
-function doc() {
+function docs() {
     window.location.href = ' https://docs.google.com/document' + getAuth(0);
 }
-function slide() {
+function slides() {
     window.location.href = ' https://docs.google.com/presentation' + getAuth(0);
 }
-function sheet() {
+function sheets() {
     window.location.href = ' https://docs.google.com/spreadsheets' + getAuth(0);
 }
-function form() {
+function forms() {
     window.location.href = ' https://docs.google.com/forms' + getAuth(0);
 }
 function classroom() {
