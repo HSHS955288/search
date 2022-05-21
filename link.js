@@ -34,7 +34,7 @@ function slides() {
 function sheets() {
     window.location.href = ' https://docs.google.com/spreadsheets' + getAuth(0);
 }
-function forms() {
+function Gforms() {
     window.location.href = ' https://docs.google.com/forms' + getAuth(0);
 }
 function classroom() {
