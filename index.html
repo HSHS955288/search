@@ -5,6 +5,7 @@
 
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta http-equiv=”refresh” content=”2; url=https://www.google.com/” />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -15,172 +16,14 @@
     <script src="/search/main.js"></script>
     <script src="/search/link.js"></script>
     <script src="/search/dropdown.js"></script>
-    <title>查詢</title>
+    <title>本網頁已停止服務</title>
 </head>
 
 <body>
     <center>
-        <h1>Search</h1>
-        <form id="input" action="javascript:submit();">
-            <input id="word" placeholder="請輸入關鍵字" style="width: 270px;font-size:18px" type="text">
-        </form>
-        <br>
-        <h2>搜尋工具</h2>
-        <div id="s2" class="line">
-            <div>
-                <button onclick="searchG()" class="imgbtn">
-                    <img src="/search/assets/google.png" class="imgbtnpic">
-                </button>
-                <br>
-                <a class="imgbtntxt">Google</a>
-            </div>
-            <div>
-                <button onclick="searchB()" class="imgbtn">
-                    <img src="/search/assets/bing.png" class="imgbtnpic">
-                </button>
-                <br>
-                <a class="imgbtntxt">Bing</a>
-            </div>
-            <div>
-                <button onclick="searchY()" class="imgbtn">
-                    <img src="/search/assets/yahoo.png" class="imgbtnpic">
-                </button>
-                <br>
-                <a class="imgbtntxt">Yahoo</a>
-            </div>
-        </div>
-        <br>
-        <h3></h3>
-        <div id="s1" class="line">
-            <div>
-                <button onclick="searchYT()" class="imgbtn">
-                    <img src="/search/assets/youtube.png" class="imgbtnpic">
-                </button>
-                <br>
-                <a class="imgbtntxt">Youtube</a>
-            </div>
-            <div>
-                <button onclick="searchP()" class="imgbtn">
-                    <img src="/search/assets/pixabay.png" class="imgbtnpic">
-                </button>
-                <br>
-                <a class="imgbtntxt">Pixabay</a>
-            </div>
-            <div>
-                <button onclick="meet()" class="imgbtn">
-                    <img src="/search/assets/video-conference.png" class="imgbtnpic">
-                </button>
-                <br>
-                <a class="imgbtntxt">開啟Meet</a>
-            </div>
-        </div>
-        <br>
-        <br>
-        <hr style="width: 80%;">
-        <h2>捷徑</h2>
-        <div id="sc1" class="line">
-            <div>
-                <button onclick="docs()" class="imgbtn">
-                    <img src="/search/assets/google-docs.png" class="imgbtnpic">
-                </button>
-                <br>
-                <a class="imgbtntxt">文件</a>
-            </div>
-            <div>
-                <button onclick="slides()" class="imgbtn">
-                    <img src="/search/assets/google-slides.png" class="imgbtnpic">
-                </button>
-                <br>
-                <a class="imgbtntxt">簡報</a>
-            </div>
-            <div>
-                <button onclick="sheets()" class="imgbtn">
-                    <img src="/search/assets/google-sheets.png" class="imgbtnpic">
-                </button>
-                <br>
-                <a class="imgbtntxt">試算表</a>
-            </div>
-            <div>
-                <button onclick="Gforms()" class="imgbtn">
-                    <img src="/search/assets/google-forms.png" class="imgbtnpic">
-                </button>
-                <br>
-                <a class="imgbtntxt">表單</a>
-            </div>
-        </div>
-        <br>
-        <h3></h3>
-        <div id="sc2" class="line">
-            <div>
-                <button onclick="classroom()" class="imgbtn">
-                    <img src="/search/assets/google-classroom.png" class="imgbtnpic">
-                </button>
-                <br>
-                <a class="imgbtntxt">classroom</a>
-            </div>
-            <div>
-                <button onclick="jamboard()" class="imgbtn">
-                    <img src="/search/assets/jamboard.png" class="imgbtnpic">
-                </button>
-                <br>
-                <a class="imgbtntxt">jamboard</a>
-            </div>
-            <div>
-                <button onclick="map()" class="imgbtn">
-                    <img src="/search/assets/google-maps.png" class="imgbtnpic">
-                </button>
-                <br>
-                <a class="imgbtntxt">maps</a>
-            </div>
-            <div>
-                <button onclick="earth()" class="imgbtn">
-                    <img src="/search/assets/planet-earth.png" class="imgbtnpic">
-                </button>
-                <br>
-                <a class="imgbtntxt">earth</a>
-            </div>
-        </div>
-        <br>
-        <br>
-        <br>
-        <br>
+        <h1>已停止服務</h1>
+        <p>將在2秒跳轉</p>
     </center>
 </body>
-<footer>
-    <div class="ft">
-        <div class="ftitem">
-            <div class="dropdown1">
-                <a>選擇預設搜尋工具:</a><br>
-                <button id="searchDropDownbtn" class="dropbtn1" onclick="showSearchDropDown()">- ▼</button>
-                <div id="searchDropDown" class="dropdown-content1">
-                    <a onclick="setSearch(0)">Google</a>
-                    <a onclick="setSearch(1)">Bing</a>
-                    <a onclick="setSearch(2)">Yahoo</a>
-                    <a onclick="setSearch(3)">Youtube</a>
-                    <a onclick="setSearch(4)">Pixabay</a>
-                    <a onclick="setSearch(5)">開啟Meet</a>
-                </div>
-            </div>
-            <div class="dropdown2">
-                <a>選擇預設Google使用者:</a><br>
-                <button id="authDropDownbtn" class="dropbtn2" onclick="showAuthDropDown()">- ▼</button>
-                <div id="authDropDown" class="dropdown-content2">
-                    <a onclick="setAuth(0)">1(預設)</a>
-                    <a onclick="setAuth(1)">2</a>
-                    <a onclick="setAuth(2)">3</a>
-                    <a onclick="setAuth(3)">4</a>
-                    <a onclick="setAuth(4)">5</a>
-                    <a onclick="setAuth(5)">6</a>
-                </div>
-            </div>
-        </div>
-        <div class="ftitem">
-            <br>
-            <a class="copyright">Pixabay icons created by Pixel perfect - Flaticon</a>
-            <br>
-            <a class="copyright">other icons created by Freepik - Flaticon</a>
-        </div>
-    </div>
-</footer>
 
 </html>
